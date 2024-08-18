@@ -249,9 +249,9 @@ USE_FRONTEND = 1
 endif
 ifeq "$(PLATFORM)" "libretro"
 OBJS += platform/libretro/libretro.o
+OBJS += platform/libretro/libretro-common/formats/png/rpng.o
 ifneq ($(STATIC_LINKING), 1)
 CFLAGS += -DHAVE_ZLIB
-OBJS += platform/libretro/libretro-common/formats/png/rpng.o
 OBJS += platform/libretro/libretro-common/streams/trans_stream.o
 OBJS += platform/libretro/libretro-common/streams/trans_stream_pipe.o
 OBJS += platform/libretro/libretro-common/streams/trans_stream_zlib.o
