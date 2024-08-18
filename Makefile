@@ -250,12 +250,12 @@ endif
 ifeq "$(PLATFORM)" "libretro"
 OBJS += platform/libretro/libretro.o
 OBJS += platform/libretro/libretro-common/formats/png/rpng.o
+OBJS += platform/libretro/libretro-common/file/file_path_io.o
 ifneq ($(STATIC_LINKING), 1)
 CFLAGS += -DHAVE_ZLIB
 OBJS += platform/libretro/libretro-common/streams/trans_stream.o
 OBJS += platform/libretro/libretro-common/streams/trans_stream_pipe.o
 OBJS += platform/libretro/libretro-common/streams/trans_stream_zlib.o
-OBJS += platform/libretro/libretro-common/file/file_path_io.o
 OBJS += platform/libretro/libretro-common/file/file_path.o
 OBJS += platform/libretro/libretro-common/vfs/vfs_implementation.o
 OBJS += platform/libretro/libretro-common/time/rtime.o
